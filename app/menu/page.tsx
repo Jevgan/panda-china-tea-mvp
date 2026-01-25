@@ -1,26 +1,5 @@
+'use server';
 import { db } from "@/lib/db";
-import { JsonValue } from "@prisma/client/runtime/library";
-import Link from "next/link";
-
-interface OrderItem {
-
-}
-
-interface Category {
-
-}
-
-interface Product {
-    id: string,
-    name: string,
-    description: JsonValue,
-    price: number,
-    imageUrl: string,
-    inStock: boolean,
-    createdAt: Date,
-    orderItem: OrderItem[],
-    category: Category
-}
 
 export default async function Page({ }) {
     const users = await db.user.findMany({

@@ -21,3 +21,22 @@ A full-stack e-commerce application built to create eady user interaction with i
 * [ ] Implement JWT 
 * [ ] Shopping Cart Logic 
 * [ ] Payment Integration 
+
+
+## 🔮 Planned Architecture (Phase 2)
+
+### Authentication (JWT)
+* **Goal:** Secure stateless authentication for user accounts and order history.
+* **Strategy:** Implementing **NextAuth.js (Auth.js)** with the Prisma Adapter.
+* **Flow:** 1. User logs in (Credentials or OAuth).
+  2. Server issues a signed **JWT** containing the `userId` and `role` (Admin/User).
+  3. JWT is stored in an HTTP-Only cookie for security.
+  4. Middleware validates the token before allowing access to `/admin` or `/profile` routes.
+
+### Caching Strategy (Redis)
+* **Goal:** Minimize database load for high-traffic pages (Product Catalog).
+* **Problem:** The tea menu rarely changes, but is read frequently.
+* **Solution:** Implementing **Redis (Upstash/Vercel KV)** to cache database query results.
+* **Logic:** * Check Cache -> If Hit: Return Data (10ms).
+  * If Miss: Query Postgres (300ms) -> Write to Cache -> Return Data.
+  * **Revalidation:** Trigger cache purge only when an Admin updates a product.
