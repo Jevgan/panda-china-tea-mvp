@@ -7,8 +7,9 @@ export interface User{
     passwordHash:string,
     role: string,
     registered: Date,
-    orders: Order[],
-    supportTickets: SupportTicket[]
+
+    orders?: Order[],
+    supportTickets?: SupportTicket[]
 }
 
 
@@ -20,15 +21,18 @@ export interface Product {
     imageUrl: string,
     inStock: boolean,
     createdAt: Date,
-    orderItem: OrderItem[],
-    category: Category
+
+    categoryId?: string,
+    orderItem?: OrderItem[],
+    category?: Category
 }
 
 export interface Category {
     id: string,
     name: string,
+
     parent?: Category,
-    subCategories: Category[],
+    subCategories?: Category[],
     products: Product[]
 }
 
@@ -46,8 +50,8 @@ export interface OrderItem {
    price: number,
    quantity: number,
    discount?: number,
-   product: Product,
-   order: Order
+   product?: Product,
+   order?: Order
 }
 
 export interface SupportTicket{
