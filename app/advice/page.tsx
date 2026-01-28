@@ -1,7 +1,7 @@
-export default function About(){
+export default function Advice(){
     return (
         <div>
             
         </div>
-    )    
+    )
 }

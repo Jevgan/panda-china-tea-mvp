@@ -1,5 +1,3 @@
-'use server';
-
 import { TeaDetails } from "../types";
 
 export default async function ProductDesctiption({ data }: { data: unknown }) {

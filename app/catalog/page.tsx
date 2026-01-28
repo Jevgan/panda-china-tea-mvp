@@ -1,8 +1,7 @@
-'use server';
 import { db } from "@/lib/db";
 import { Product, TeaDetails } from "@/app/types/index";
 import Image from "next/image";
-import ProductDesctiption from "./ProductDescription";
+import ProductDesctiption from "./ProductDescription.server";
 import greenTeaImage from "@/public/green_tea.jpg"
 
 export default async function Page({ }) {

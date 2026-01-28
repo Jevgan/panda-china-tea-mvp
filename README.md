@@ -17,7 +17,7 @@ A full-stack e-commerce application built to create eady user interaction with i
 ##  Status
 * [x] Database connection 
 * [x] Product Schema & Relations
-* [ ] Define interfaces to handle JSON data (In Progress)
+* [x] Define interfaces to handle JSON data (In Progress)
 * [ ] Implement JWT 
 * [ ] Shopping Cart Logic 
 * [ ] Payment Integration 
@@ -40,3 +40,50 @@ A full-stack e-commerce application built to create eady user interaction with i
 * **Logic:** * Check Cache -> If Hit: Return Data (10ms).
   * If Miss: Query Postgres (300ms) -> Write to Cache -> Return Data.
   * **Revalidation:** Trigger cache purge only when an Admin updates a product.
+
+
+## React / Next.js agenda
+
+### Day 1(22.01.26):
+
+1. [x] Initialize the project on Next.js 14, Tailwind, React, Supabase, Prisma, PostgreSQL.
+2. [x] Start this project and see "Hello world".
+
+### Day 2(23.01.26)
+
+1. [x] Added the favicon.
+
+### Day 3(24.01.26)
+
+1. [x] Define the interfaces for enities.
+2. [x] Learn the basic concepts of Next.js and React.
+
+### Day 4(25.01.26)
+
+1. [x] Product card(almost).
+2. [x] Part of Header.
+3. [x] Search UI.
+
+### Day 5(26.01.26)
+
+1. [x] Theme Toggler, Header.
+    1. [x] Create the animation on toggle: sun goes down and dask sun comes from bottom and vice versa.
+    2. [x] Header UI ready.
+
+
+### Day 6(27.01.26)
+
+* [ ] About page.
+* [ ] Footer.
+* [ ] Contacts page.
+
+### Day 7(28.01.26)
+
+1. [] Mobile Menu.
+2. [] AI Search.
+
+### Day 8(29.01.26)
+
+1. [] Profile.
+2. [] Shopping cart.
+3. [] Login page.
