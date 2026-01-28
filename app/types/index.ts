@@ -16,7 +16,7 @@ export interface User{
 export interface Product {
     id: string,
     name: string,
-    description: TeaDetails,
+    description: TeaDetails | unknown,
     price: number,
     imageUrl: string,
     inStock: boolean,

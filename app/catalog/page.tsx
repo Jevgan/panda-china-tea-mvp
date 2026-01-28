@@ -11,7 +11,7 @@ export default async function Page({ }) {
         <div className="p-10 w-5xl">
             <h1 className="text-2xl font-bold mb-4">Tea Menu</h1>
 
-            {products.map((product) => {
+            {products.map((product: Product) => {
                 const details = product.description as unknown as TeaDetails;
                 return (
 
