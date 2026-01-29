@@ -17,29 +17,31 @@ A full-stack e-commerce application built to create eady user interaction with i
 ##  Status
 * [x] Database connection 
 * [x] Product Schema & Relations
-* [x] Define interfaces to handle JSON data (In Progress)
-* [ ] Implement JWT 
+* [x] Define interfaces to handle JSON data 
+* [ ] AI products search.
+* [ ] Implement Supabase Auth 
 * [ ] Shopping Cart Logic 
 * [ ] Payment Integration 
 
 
-## 🔮 Planned Architecture (Phase 2)
+## Planned Architecture (Phase 2)
 
-### Authentication (JWT)
+### Authentication (Supabase Auth)
 * **Goal:** Secure stateless authentication for user accounts and order history.
-* **Strategy:** Implementing **NextAuth.js (Auth.js)** with the Prisma Adapter.
-* **Flow:** 1. User logs in (Credentials or OAuth).
-  2. Server issues a signed **JWT** containing the `userId` and `role` (Admin/User).
-  3. JWT is stored in an HTTP-Only cookie for security.
-  4. Middleware validates the token before allowing access to `/admin` or `/profile` routes.
+* **Strategy:** Implementing **Supabase Auth (Auth.js)** with the Prisma Adapter.
+* **Flow:** 
+    <!-- 1. User logs in (Credentials or OAuth). -->
+    <!-- 2. Server issues a signed **JWT** containing the `userId` and `role` (Admin/User). -->
+    <!-- 3. JWT is stored in an HTTP-Only cookie for security. -->
+    <!-- 4. Middleware validates the token before allowing access to `/admin` or `/profile` routes. -->
 
 ### Caching Strategy (Redis)
 * **Goal:** Minimize database load for high-traffic pages (Product Catalog).
 * **Problem:** The tea menu rarely changes, but is read frequently.
-* **Solution:** Implementing **Redis (Upstash/Vercel KV)** to cache database query results.
+* **Solution:** Implementing **Redis (Upstash)** to cache database query results.
 * **Logic:** * Check Cache -> If Hit: Return Data (10ms).
-  * If Miss: Query Postgres (300ms) -> Write to Cache -> Return Data.
-  * **Revalidation:** Trigger cache purge only when an Admin updates a product.
+    * If Miss: Query Postgres (300ms) -> Write to Cache -> Return Data.
+    * **Revalidation:** Trigger cache purge only when an Admin updates a product.
 
 
 ## React / Next.js agenda
@@ -67,23 +69,25 @@ A full-stack e-commerce application built to create eady user interaction with i
 ### Day 5(26.01.26)
 
 1. [x] Theme Toggler, Header.
-    1. [x] Create the animation on toggle: sun goes down and dask sun comes from bottom and vice versa.
-    2. [x] Header UI ready.
+1. [x] Create the animation on toggle: sun goes down and dask sun comes from bottom and vice versa.
+2. [x] Header UI ready.
 
 
-### Day 6(27.01.26)
+### Day 9(27.01.26) [X]
 
+* [ ] Mobile Menu.
 * [ ] About page.
 * [ ] Footer.
 * [ ] Contacts page.
 
-### Day 7(28.01.26)
+### Day 10(30.01.26)
 
-1. [] Mobile Menu.
-2. [] AI Search.
+* [ ] AI Search.
+* [ ] Login Page.
+* [ ] Supabase Auth.
 
-### Day 8(29.01.26)
+### Day 11(31.01.26)
 
-1. [] Profile.
-2. [] Shopping cart.
-3. [] Login page.
+* [ ] Profile.
+* [ ] Shopping cart.
+* [ ] Login page.

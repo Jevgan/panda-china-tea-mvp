@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Header from "./_components/Header/Header.client";
 import { Providers } from "./providers";
+import Navigation from "./_components/Header/Navigation.client";
+import SideMenu from "./_components/SidePanel/SideMenu.client";
 
 const montserrat = Montserrat({
     variable: "--font-montserrat",
@@ -30,7 +32,10 @@ export default function RootLayout({
 
                 <Providers>
                     <Header />
-                    <main>
+                    <SideMenu>
+                        <Navigation display="flex-col"/>
+                    </SideMenu>
+                    <main className="min-h-screen">
                         {children}
                     </main>
                 </Providers>

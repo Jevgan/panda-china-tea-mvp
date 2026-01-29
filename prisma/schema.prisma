@@ -49,6 +49,14 @@ model Category {
     products      Product[]
 }
 
+model Cart {
+    id String @id @default(cuid())
+    
+    orderId String @unique
+    userId String @unique
+    user User @relation(fields: [userId], references: [id])
+}
+
 model Order {
     id          String @id @default(cuid())
     totalAmount Float
