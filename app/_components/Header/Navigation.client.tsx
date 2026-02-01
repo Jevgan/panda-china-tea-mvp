@@ -1,34 +1,74 @@
 'use client';
+import { Coffee, Lightbulb, Phone, UsersRound } from "lucide-react";
 import Link from "next/link";
+import { ReactNode } from "react";
 
-export default function Navigation({display}:{display: string}) {
+export const Underline = () => <span className="absolute w-full scale-x-0 h-0.5 mt-1 inset-x-0 bottom-0  bg-black dark:bg-white rounded-full group-hover:scale-x-100 peer-focus:scale-x-100 transition-transform duration-300 " />;
+
+export function NavigationCatalog({ className, children }: { className?: string, children?: ReactNode }) {
     return (
-        <div className={`align-middle gap-x-6 hidden lg:flex items-center  ${display}`}>
-            {/* <div className="relative group"> */}
-            {/*     <Link className="peer outline-none" href="/">Головна</Link> */}
-            {/*     <span className="absolute w-full scale-x-0 h-0.5 inset-x-0 bottom-0  bg-black dark:bg-white rounded-full group-hover:scale-x-100 peer-focus:scale-x-100 transition-transform duration-300 "></span> */}
-            {/* </div> */}
-            {/**/}
-            <div className="relative group">
-                <Link className="peer outline-none" href="/catalog">Каталог</Link>
-                <span className="absolute w-full scale-x-0 h-0.5 inset-x-0 bottom-0  bg-black dark:bg-white rounded-full group-hover:scale-x-100 peer-focus:scale-x-100 transition-transform duration-300 "></span>
+        <div className={`${className} group`}>
+            <Coffee />
+            <div className="relative">
+                <Link className="peer outline-none font-semibold" href="/catalog">Каталог</Link>
+                {children}
             </div>
+        </div>
+    )
+}
 
-            <div className="relative group">
-                <Link className="peer outline-none" href="/about">Про нас</Link>
-                <span className="absolute w-full scale-x-0 h-0.5 inset-x-0 bottom-0  bg-black dark:bg-white rounded-full group-hover:scale-x-100 peer-focus:scale-x-100 transition-transform duration-300 "></span>
+export function NavigationAbout({ className, children }: { className?: string, children?: ReactNode }) {
+    return (
+        <div className={`${className} group`}>
+            <UsersRound />
+            <div className="relative">
+                <Link className="peer outline-none font-semibold" href="/about">Про нас</Link>
+                {children}
             </div>
+        </div>
+    )
+}
 
-            <div className="relative group">
-                <Link className="peer outline-none" href="/contacts">Контакти</Link>
-                <span className="absolute w-full scale-x-0 h-0.5 inset-x-0 bottom-0  bg-black dark:bg-white rounded-full group-hover:scale-x-100 peer-focus:scale-x-100 transition-transform duration-300 "></span>
+
+export function NavigationContacts({ className, children }: { className?: string, children?: ReactNode }) {
+    return (
+        <div className={`${className}  group`}>
+            <Phone />
+            <div className="relative">
+                <Link className="peer outline-none font-semibold" href="/contacts">Контакти</Link>
+                {children}
             </div>
+        </div>
+    )
+}
+export function NavigationAdvice({ className, children }: { className?: string, children?: ReactNode }) {
+    return (
+        <div className={`${className} relative group`}>
+        <Lightbulb/>
+            <div className="relative">
 
-            <div className="relative group">
-                <Link className="peer outline-none" href="/advice">Що обрати?</Link>
-                <span className="absolute w-full scale-x-0 h-0.5 inset-x-0 bottom-0  bg-black dark:bg-white rounded-full group-hover:scale-x-100 peer-focus:scale-x-100 transition-transform duration-300 "></span>
+                <Link className="peer outline-none font-semibold" href="/advice">Що обрати?</Link>
+                {children}
             </div>
+        </div>
+    )
+}
 
+export default function Navigation({ display }: { display: string }) {
+    return (
+        <div className={`gap-1 ${display}`}>
+            <NavigationCatalog className="flex gap-1" >
+                <Underline />
+            </NavigationCatalog >
+            <NavigationAbout className="flex gap-1" >
+                <Underline />
+            </NavigationAbout >
+            <NavigationContacts className="flex gap-1" >
+                <Underline />
+            </NavigationContacts>
+            <NavigationAdvice className="flex gap-1" >
+                <Underline />
+            </NavigationAdvice>
         </div>
     )
 }

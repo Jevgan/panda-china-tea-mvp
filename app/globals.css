@@ -3,6 +3,7 @@
 :root {
     --background: #fafafa;
     --foreground: #171717;
+    scrollbar-gutter: stable;
 }
 
 @theme inline {
@@ -20,8 +21,14 @@
     }
 }
 
+@layer components {
+    .btn-primary {
+        @apply flex justify-center-safe items-center-safe h-10 px-5 rounded-xl dark:bg-zinc-200 dark:text-black bg-gray-800 text-white hover:brightness-75
+    }
+}
 
 body {
     font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
-    transition: background-color 0.3s, color 0.3s; /* Додаємо плавний перехід */
+    transition: background-color 0.3s, color 0.3s;
+    /* Додаємо плавний перехід */
 }

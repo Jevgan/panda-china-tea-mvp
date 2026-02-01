@@ -8,7 +8,7 @@ export default function SearchInput() {
     //
     // })
     return (
-        <div className="relative flex flex-1 shrink-0 mx-4">
+        <div className="relative flex flex-1 shrink">
             <input
                 placeholder={`"Зелений чай..."`}
                 type="text"

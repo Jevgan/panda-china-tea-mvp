@@ -8,7 +8,7 @@ export default async function Page({ }) {
     const products = await db.product.findMany({})
 
     return (
-        <div className="p-10 w-5xl">
+        <div className="container p-10 ">
             <h1 className="text-2xl font-bold mb-4">Tea Menu</h1>
 
             {products.map((product: Product) => {
