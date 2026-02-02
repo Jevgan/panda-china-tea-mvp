@@ -1,4 +1,4 @@
-import Loading from "../_components/ui/Loading.client";
+import Loading from "@/_components/ui/Loading.client";
 
 export default function Advice() {
     return (

@@ -44,7 +44,7 @@ export function NavigationContacts({ className, children }: { className?: string
 export function NavigationAdvice({ className, children }: { className?: string, children?: ReactNode }) {
     return (
         <div className={`${className} relative group`}>
-        <Lightbulb/>
+            <Lightbulb />
             <div className="relative">
 
                 <Link className="peer outline-none font-semibold" href="/advice">Що обрати?</Link>
@@ -57,16 +57,16 @@ export function NavigationAdvice({ className, children }: { className?: string, 
 export default function Navigation({ display }: { display: string }) {
     return (
         <div className={`gap-1 ${display}`}>
-            <NavigationCatalog className="flex gap-1" >
+            <NavigationCatalog className="flex items-center gap-1" >
                 <Underline />
             </NavigationCatalog >
-            <NavigationAbout className="flex gap-1" >
+            <NavigationAbout className="flex items-center gap-1" >
                 <Underline />
             </NavigationAbout >
-            <NavigationContacts className="flex gap-1" >
+            <NavigationContacts className="flex items-center gap-1" >
                 <Underline />
             </NavigationContacts>
-            <NavigationAdvice className="flex gap-1" >
+            <NavigationAdvice className="flex items-center gap-1" >
                 <Underline />
             </NavigationAdvice>
         </div>

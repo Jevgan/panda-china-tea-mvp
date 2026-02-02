@@ -76,8 +76,9 @@ export interface TeaDetails{
     dimensions: {
         length: number,
         width: number
-    }
+    },
     steepTime: number,
     steepTemperature: number,
-    caffeine: "None" | "Low" | "Medium" | "High"
+    caffeine: "None" | "Low" | "Medium" | "High",
+    notes: string
 }

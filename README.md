@@ -73,21 +73,28 @@ A full-stack e-commerce application built to create eady user interaction with i
 2. [x] Header UI ready.
 
 
-### Day 9(27.01.26) [X]
+### Day 14(01.02.26)
 
-* [ ] Mobile Menu.
-* [ ] About page.
-* [ ] Footer.
+* [x] Side Menu.
+* [x] Bottom Navigation Bar.
+* [x] Fix Side Menu.
+* [x] Fix Side Menu.
+* [x] Add button general utility class.
+* [x] Create empty pages: `/profile`, `/login`, `/register`, `/cart`.
+* [x] Move zustand context to `_hooks/` folder.
+
+### Day 15(02.02.26)
+
+* [x] Fix the Wrapper(z-index), Side Menu(cleanup function).
+* [x] Footer.
+* [x] Create AI Telegram channel parser.
+
+### Day 16(03.02.26)
+
 * [ ] Contacts page.
-
-### Day 10(30.01.26)
-
 * [ ] AI Search.
-* [ ] Login Page.
 * [ ] Supabase Auth.
-
-### Day 11(31.01.26)
-
-* [ ] Profile.
+* [ ] About page.
+* [ ] Profile page.
 * [ ] Shopping cart.
 * [ ] Login page.

@@ -1,6 +1,3 @@
-// import { PrismaClient } from "@prisma/client";
-//
-// const db = new PrismaClient();
 import { db } from "@/lib/db";
 
 async function main() {
@@ -43,7 +40,7 @@ async function main() {
 
         }
     })
-    console.log("DB filled succesfully");
+    console.log("Seeded succesfully");
 
 }
 
