@@ -8,6 +8,7 @@ import Navigation from "@/_components/Header/Navigation.client";
 import SideMenu from "@/_components/SideMenu/SideMenu.client";
 import Wrapper from "@/_components/ui/Wrapper";
 import BottomNavBar from "@/_components/BottomNavBar/BottomNavBar";
+import ThemeToggle from "@/_components/ui/ThemeToggle.client";
 
 const montserrat = Montserrat({
     variable: "--font-montserrat",
@@ -30,17 +31,17 @@ export default function RootLayout({
             suppressHydrationWarning
             lang="uk">
             <body
-                className={`${montserrat.variable} antialiased overflow-x-hidden relative   min-h-screen w-full`}
+                className={`${montserrat.variable} antialiased overflow-x-hidden relative  w-full`}
             >
 
                 <Providers>
                     <Wrapper />
-                    <div className="relative max-w-7xl mx-auto">
+                    <div className="relative max-w-7xl   mx-auto ">
                         <Header />
                         <SideMenu>
                             <Navigation display="flex-col" />
                         </SideMenu>
-                        <main className="mt-16">
+                        <main className="my-32 px-6">
                             {children}
                         </main>
                         <Footer />

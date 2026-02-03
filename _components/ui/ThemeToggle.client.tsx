@@ -17,7 +17,7 @@ export default function ThemeToggle() {
 
 
     return (
-        <div className="hidden lg:block h-10 w-10 p-1 me-4 group bg-zinc-200 overflow-hidden   dark:bg-gray-800  border-transparent  rounded-xl brightness-100 hover:brightness-75">
+        <div className="h-10 w-10 p-1 me-4 group bg-zinc-200 overflow-hidden   dark:bg-gray-800  border-transparent  rounded-xl brightness-100 hover:brightness-75">
 
             <button
                 onClick={themeToggle}

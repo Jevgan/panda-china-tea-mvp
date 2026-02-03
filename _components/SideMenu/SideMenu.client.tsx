@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { LoadingCircle } from "../ui/Loading.client";
 import { usePathname } from "next/navigation";
 import CrossButton from "../ui/CrossButton.client";
+import ThemeToggle from "../ui/ThemeToggle.client";
 
 
 export default function SideMenu({ children }: { children: React.ReactNode }) {
@@ -33,7 +34,7 @@ export default function SideMenu({ children }: { children: React.ReactNode }) {
     const menuClosedStyle = `opacity-0 translate-x-full z-0`;
 
     return (
-        <div className={`${isMenuOpen ? menuOpenStyle : menuClosedStyle} fixed right-0 top-0 p-2 h-screen transition-all duration-300  `}>
+        <div className={`${isMenuOpen ? menuOpenStyle : menuClosedStyle} fixed right-0 top-0 p-2 pb-16 lg:pb-2 h-screen transition-all duration-300  `}>
 
             <div
                 className={`w-3xs pt-4  px-8 h-full bg-zinc-200 text-black dark:bg-gray-800 dark:text-white   rounded-xl `}
@@ -43,6 +44,7 @@ export default function SideMenu({ children }: { children: React.ReactNode }) {
                     <CrossButton />
                 </div>
                 {children}
+                <ThemeToggle />
             </div >
         </div>
     )

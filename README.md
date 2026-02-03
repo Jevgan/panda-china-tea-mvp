@@ -91,10 +91,28 @@ A full-stack e-commerce application built to create eady user interaction with i
 
 ### Day 16(03.02.26)
 
-* [ ] Contacts page.
+* [x] Contacts page.
+
+### Day 17(04.02.26)
+
+
+* [ ] Login page.
+* [ ] Register page.
+* [ ] Profile page.
+
+
+### Day 18(05.02.26)
+
+* [ ] Shopping cart.
 * [ ] AI Search.
+
+
+### Day 19(06.02.26)
+
 * [ ] Supabase Auth.
 * [ ] About page.
-* [ ] Profile page.
-* [ ] Shopping cart.
-* [ ] Login page.
+* [ ] SSL sertificate.
+* [ ] Payment via Liqpay.
+* [ ] User Agreement, License.
+* [ ] Cookies.
+* [ ] Redis via upstash.

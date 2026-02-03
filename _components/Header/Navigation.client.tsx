@@ -3,9 +3,9 @@ import { Coffee, Lightbulb, Phone, UsersRound } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-export const Underline = () => <span className="absolute w-full scale-x-0 h-0.5 mt-1 inset-x-0 bottom-0  bg-black dark:bg-white rounded-full group-hover:scale-x-100 peer-focus:scale-x-100 transition-transform duration-300 " />;
+export const Underline = ({ className = "" }: { className?: string }) => <span className={`${className} absolute w-full scale-x-0  h-0.5  inset-x-0 mt-1 bottom-0 bg-black dark:bg-white rounded-full group-hover:scale-x-100 peer-focus:scale-x-100 transition-transform duration-300 `} />;
 
-export function NavigationCatalog({ className, children }: { className?: string, children?: ReactNode }) {
+export function NavigationCatalog({ className = "", children }: { className?: string, children?: ReactNode }) {
     return (
         <div className={`${className} group`}>
             <Coffee />
@@ -17,7 +17,7 @@ export function NavigationCatalog({ className, children }: { className?: string,
     )
 }
 
-export function NavigationAbout({ className, children }: { className?: string, children?: ReactNode }) {
+export function NavigationAbout({ className = "", children }: { className?: string, children?: ReactNode }) {
     return (
         <div className={`${className} group`}>
             <UsersRound />
@@ -30,7 +30,7 @@ export function NavigationAbout({ className, children }: { className?: string, c
 }
 
 
-export function NavigationContacts({ className, children }: { className?: string, children?: ReactNode }) {
+export function NavigationContacts({ className = "", children }: { className?: string, children?: ReactNode }) {
     return (
         <div className={`${className}  group`}>
             <Phone />
@@ -43,7 +43,7 @@ export function NavigationContacts({ className, children }: { className?: string
 }
 export function NavigationAdvice({ className, children }: { className?: string, children?: ReactNode }) {
     return (
-        <div className={`${className} relative group`}>
+        <div className={`${className}  group`}>
             <Lightbulb />
             <div className="relative">
 

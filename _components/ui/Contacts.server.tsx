@@ -1,14 +1,13 @@
 import { TelegramIcon, InstagramIcon, ViberIcon } from "../ui/SVG/MessengerIcons"
 
-export default function Contacts() {
+export default function Contacts({className = ""}:{className?: string}) {
     return (
-        <div className="flex flex-col gap-4 text-sm ">
+        <div className={`${className} flex flex-col gap-4 text-sm `}>
             <h3 className="font-semibold uppercase  text-lg">
-                Контакти
+                Контактна інформація
             </h3>
             
             <div className="flex flex-col gap-2">
-                {/* Phone: href must have no spaces, display text should have spaces */}
                 <a 
                     href="tel:+380686314453" 
                     className="font-medium hover:text-yellow-900  transition-colors"
