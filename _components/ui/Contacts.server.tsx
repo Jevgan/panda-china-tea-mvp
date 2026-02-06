@@ -3,7 +3,7 @@ import { TelegramIcon, InstagramIcon, ViberIcon } from "../ui/SVG/MessengerIcons
 export default function Contacts({className = ""}:{className?: string}) {
     return (
         <div className={`${className} flex flex-col gap-4 text-sm `}>
-            <h3 className="font-semibold uppercase  text-lg">
+            <h3 className="font-semibold uppercase  text-center lg:text-left text-lg">
                 Контактна інформація
             </h3>
             

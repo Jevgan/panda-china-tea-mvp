@@ -25,6 +25,10 @@
     .btn-primary {
         @apply flex justify-center-safe items-center-safe h-10 px-5 rounded-xl dark:bg-zinc-200 dark:text-black bg-gray-800 text-white hover:brightness-75
     }
+
+    .bg-bamboo{
+        @apply bg-[url("/public/background.png")]
+    }
 }
 
 body {

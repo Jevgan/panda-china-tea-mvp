@@ -10,17 +10,18 @@ datasource db {
 }
 
 model User {
-  id           String   @id @default(cuid())
+  id           String   @id @db.Uuid
   username     String?
   email        String   @unique
-  passwordHash String
   role         String   @default("USER")
-  registered   DateTime @default(now())
+  avatar_url   String? 
 
   // --- Relations --- 
   orders         Order[]
   supportTickets SupportTicket[]
   cart           Cart?
+
+  @@map("profiles")
 }
 
 model Product {
@@ -58,10 +59,18 @@ model Cart {
   user    User   @relation(fields: [userId], references: [id])
 }
 
+enum OrderStatus{
+    PENDING
+    PAID 
+    SHIPPED
+    DELIVERED
+    CANCELLED
+}
+
 model Order {
   id          String @id @default(cuid())
   totalAmount Float
-  status      String @default("PENDING")
+  status      OrderStatus @default(PENDING)
 
   createdAt DateTime @default(now())
 

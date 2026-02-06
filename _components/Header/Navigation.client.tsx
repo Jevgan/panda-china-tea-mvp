@@ -1,4 +1,3 @@
-'use client';
 import { Coffee, Lightbulb, Phone, UsersRound } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";

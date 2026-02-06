@@ -23,6 +23,8 @@
     "devDependencies": {
         "@google/genai": "^1.39.0",
         "@prisma/adapter-pg": "^6.19.2",
+        "@supabase/ssr": "^0.8.0",
+        "@supabase/supabase-js": "^2.95.3",
         "@tailwindcss/postcss": "^4",
         "@types/node": "^20.19.30",
         "@types/pg": "^8.16.0",

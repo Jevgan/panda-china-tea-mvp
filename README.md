@@ -93,23 +93,21 @@ A full-stack e-commerce application built to create eady user interaction with i
 
 * [x] Contacts page.
 
-### Day 17(04.02.26)
+### Day 17(06.02.26)
 
+* [x] Supabase Auth. Started.
+* [x] Login page. Started.
 
-* [ ] Login page.
+### Day 18(07.02.26)
+
 * [ ] Register page.
 * [ ] Profile page.
-
-
-### Day 18(05.02.26)
-
 * [ ] Shopping cart.
 * [ ] AI Search.
 
 
-### Day 19(06.02.26)
+### Day 19(08.02.26)
 
-* [ ] Supabase Auth.
 * [ ] About page.
 * [ ] SSL sertificate.
 * [ ] Payment via Liqpay.
