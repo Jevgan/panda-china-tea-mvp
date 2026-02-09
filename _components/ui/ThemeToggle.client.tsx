@@ -23,7 +23,7 @@ export default function ThemeToggle() {
                 onClick={themeToggle}
                 className="relative h-full w-full"
             >
-                <Sun strokeWidth={1.5} className={`absolute w-full h-full inset-0  ${theme === 'dark' ? '-translate-y-9' : 'translate-y-0'} outline-none transition-all`} />
+                <Sun strokeWidth={1.5} className={`absolute w-full h-full inset-0  ${theme === 'dark' ? '-translate-y-10' : 'translate-y-0'} outline-none transition-all`} />
                 <Moon strokeWidth={1.5} className={`absolute w-full h-full inset-0 ${theme === 'dark' ? 'translate-y-0' : 'translate-y-9'} outline-none  transition-all`} />
             </button>
         </div>

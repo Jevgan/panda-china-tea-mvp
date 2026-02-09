@@ -21,5 +21,4 @@ export default async function signInWithGoogle() {
     }
 
     if (data.url) redirect(data.url);
-
 }

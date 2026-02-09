@@ -1,5 +1,7 @@
 'use server';
-export default async function login(formData: FormData){
 
+import { redirect } from "next/navigation";
 
+export default async function login(prevState: any, formData: FormData){
+    return redirect('/');
 }

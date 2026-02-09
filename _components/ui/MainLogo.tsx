@@ -12,7 +12,7 @@ export default function MainLogo({ className = "", textVisibleOnMobile }: { clas
                 width={50}
                 height={50}
             />
-            <div className={`${textVisibleOnMobile ? "flex" : "hidden"} lg:flex flex-col leading-none`}>
+            <div className={`${textVisibleOnMobile ? "flex" : "hidden"}  flex-col leading-none`}>
                 <span className="text-lg font-bold text-yellow-900 leading-5  uppercase tracking-tighter">Panda</span>
                 <span className="ml-0.5 text-[12px] font-medium tracking-widest uppercase">China Tea</span>
             </div>
